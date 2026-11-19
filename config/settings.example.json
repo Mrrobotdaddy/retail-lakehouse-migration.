@@ -1,0 +1,39 @@
+{
+  "_comment": "Configuration template for Retail Lakehouse Migration. Copy this file to settings.json and fill in your actual values. NEVER commit settings.json.",
+  "azure_environment": {
+    "subscription_id": "<YOUR_AZURE_SUBSCRIPTION_ID>",
+    "tenant_id": "<YOUR_AZURE_TENANT_ID>",
+    "region": "centralindia",
+    "resource_group_name": "rg-retail-lakehouse-dev"
+  },
+  "storage": {
+    "account_name": "stretaildevrg",
+    "dfs_endpoint": "https://stretaildevrg.dfs.core.windows.net",
+    "containers": {
+      "bronze": "bronze",
+      "silver": "silver",
+      "gold": "gold"
+    }
+  },
+  "sql_database": {
+    "server_name": "sql-retail-dev-rg.database.windows.net",
+    "database_name": "adventureworkslt-db",
+    "admin_username": "sqladmin",
+    "port": 1433
+  },
+  "key_vault": {
+    "vault_name": "kv-retail-dev-rg",
+    "vault_uri": "https://kv-retail-dev-rg.vault.azure.net/",
+    "secret_names": {
+      "sql_admin_password": "sql-admin-password",
+      "sql_connection_string": "sql-connection-string"
+    }
+  },
+  "data_factory": {
+    "factory_name": "adf-retail-dev-rg"
+  },
+  "databricks": {
+    "workspace_name": "dbw-retail-dev",
+    "secret_scope_name": "kv-scope-retail"
+  }
+}

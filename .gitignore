@@ -1,0 +1,53 @@
+# ==============================================================================
+# .gitignore - Retail Lakehouse Migration
+# Protects against leaking secrets, credentials, runtime data, and local configs
+# ==============================================================================
+
+# Local configuration files containing real environment details or secrets
+config/settings.json
+config/*.local.json
+.env
+*.env
+
+# Secret files, keys, and certificates
+*.pem
+*.key
+*.pfx
+*.cert
+*.secret
+
+# Azure Data Factory local runtime logs and cache
+.adf/
+adf_cache/
+
+# Databricks local credentials and CLI tokens
+.databrickscfg
+*.dbc
+
+# Python virtual environment and caching
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# IDE-specific configurations
+.vscode/settings.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts, logs, and temp outputs
+*.log
+tmp/
+temp/
+out/
